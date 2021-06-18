@@ -17,11 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: hajiuhajiu/jdsign1112
-      - name: Use Node.js ${{ matrix.node-version }}
+		name: Checkout
+        uses: actions/checkout@v2      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
